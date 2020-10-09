@@ -9,7 +9,6 @@ import Text from 'components/Text'
 import { FrontMatter } from 'interfaces'
 import PageViews from 'components/PageViews'
 import { NextSeo } from 'next-seo'
-import dayjs from 'dayjs'
 
 const sortedBlogFrontMatter = blogFrontMatter.sort(
   (a: FrontMatter, b: FrontMatter) => {
