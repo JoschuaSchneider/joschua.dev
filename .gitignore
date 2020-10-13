@@ -20,6 +20,9 @@
 *.pem
 /.mdx-data/
 
+# unfinished blog posts
+/pages/blog/*-draft.mdx
+
 # debug
 npm-debug.log*
 yarn-debug.log*
