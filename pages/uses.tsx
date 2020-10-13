@@ -8,9 +8,9 @@ import { unsplashById } from 'utils/unsplash'
 const Uses = () => (
   <Layout>
     <NextSeo title="Uses" description="Technologies and tools I use." />
-    <Container className="my-8">
+    <Container className="mt-8">
       <div
-        className="px-6 py-8 rounded-sm"
+        className="px-6 py-6 rounded"
         style={{
           backgroundImage: `url(${unsplashById('dpCgZJoneZM', 709, 200)})`,
         }}
@@ -23,47 +23,54 @@ const Uses = () => (
         </Text>
       </div>
     </Container>
-    <Container className="my-12">
-      <div className="prose">
-        <h2>Mac</h2>
-        <p>
-          <strong>15" Retina MacBook Pro (Mid 2015)</strong>
-        </p>
-        <ul>
-          <li>2,5 GHz Quad-Core Intel Core i7</li>
-          <li>16 GB 1600 MHz DDR3L</li>
-          <li>512 GB SSD</li>
-          <li>Radeon R9 M370X GPU</li>
-        </ul>
-        <p>
-          <strong>Peripherals</strong>
-        </p>
-        <ul>
-          <li>Apple Magic Keyboard</li>
-          <li>Apple Magic Mouse 2</li>
-          <li>Rain Design mStand</li>
-        </ul>
-        <h2>Windows</h2>
-        <p>
-          <strong>AMD mATX Build</strong>
-        </p>
-        <ul>
-          <li>AMD Ryzen 5 2600X</li>
-          <li>be quiet! Dark Rock TF Cooler</li>
-          <li>Kingston 16 GB DDR4-2400</li>
-          <li>Samsung 500 GB M.2 NVME SSD, Seagate 1TB HDD</li>
-          <li>AMD Radeon RX590 8GB</li>
-        </ul>
-        <p>
-          <strong>Peripherals</strong>
-        </p>
-        <ul>
-          <li>Logitech G513 Carbon TACTILE Keyboard</li>
-          <li>Logitech G502 Mouse</li>
-          <li>Samsung 34" Ultrawide Curved Monitor (1440p)</li>
-          <li>Rode NT USB Microphone</li>
-          <li>Sony WH-1000XM3 Headphones</li>
-        </ul>
+    <Container className="mt-6 mb-12">
+      <div className="prose max-w-none">
+        <div className="flex flex-wrap justify-between w-full md:flex-no-wrap">
+          <div className="pr-12">
+            <h2>Windows</h2>
+            <p>
+              <strong>AMD mATX Build</strong>
+            </p>
+            <ul>
+              <li>AMD Ryzen 5 2600X</li>
+              <li>be quiet! Dark Rock TF Cooler</li>
+              <li>Kingston 16 GB DDR4-2400</li>
+              <li>Samsung 500 GB M.2 NVME SSD, 1TB HDD</li>
+              <li>AMD Radeon RX590 8GB</li>
+            </ul>
+            <p>
+              <strong>Peripherals</strong>
+            </p>
+            <ul>
+              <li>Logitech G513 Carbon TACTILE Keyboard</li>
+              <li>Logitech G502 Mouse</li>
+              <li>Samsung 34" Ultrawide Curved Monitor (1440p)</li>
+              <li>Rode NT USB Microphone</li>
+              <li>Sony WH-1000XM3 Headphones</li>
+            </ul>
+          </div>
+          <div className="">
+            <h2>Mac</h2>
+            <p>
+              <strong>MacBook Pro (Mid 2015)</strong>
+            </p>
+            <ul>
+              <li>15" Retina</li>
+              <li>2,5 GHz Quad-Core Intel Core i7</li>
+              <li>16 GB 1600 MHz DDR3L</li>
+              <li>512 GB SSD</li>
+              <li>Radeon R9 M370X GPU</li>
+            </ul>
+            <p>
+              <strong>Peripherals</strong>
+            </p>
+            <ul>
+              <li>Apple Magic Keyboard</li>
+              <li>Apple Magic Mouse 2</li>
+              <li>Rain Design mStand</li>
+            </ul>
+          </div>
+        </div>
         <h2>Editor & Terminal</h2>
         <ul>
           <li>
@@ -74,6 +81,10 @@ const Uses = () => (
               I run VS Code on both platforms. On Windows I use WSL2 to
               streamline the experience.
             </p>
+            <p>
+              The theme is a modified Version of <strong>One Dark Pro</strong>
+            </p>
+            <img src="/uses-vscode.jpg" alt="" />
           </li>
           <li>
             <p>
