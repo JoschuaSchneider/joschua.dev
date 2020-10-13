@@ -1,5 +1,5 @@
 {
-  "name": "with-typescript",
+  "name": "joschua-dev",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -28,7 +28,7 @@
     "remark-autolink-headings": "^6.0.1",
     "remark-code-titles": "^0.1.1",
     "remark-slug": "^6.0.0",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.9.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
