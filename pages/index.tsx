@@ -81,22 +81,22 @@ const Index = ({ repos }: { repos: any[] }) => (
         <Skill
           title="JavaScript"
           since={2014}
-          className="col-span-2 text-indigo-700 bg-indigo-100 md:col-span-3"
+          className="col-span-2 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200 md:col-span-3"
         />
         <Skill
           title="React"
           since={2016}
-          className="col-span-1 text-indigo-700 bg-indigo-100"
+          className="col-span-1 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200"
         />
         <Skill
           title="Node"
           since={2014}
-          className="col-span-1 text-indigo-700 bg-indigo-100"
+          className="col-span-1 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200"
         />
         <Skill
           title="TypeScript"
           since={2019}
-          className="col-span-1 text-indigo-700 bg-indigo-100"
+          className="col-span-1 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200"
         />
       </div>
     </Container>
@@ -108,17 +108,19 @@ const Index = ({ repos }: { repos: any[] }) => (
         {repos.map((repo) => (
           <div
             key={repo.name}
-            className="px-6 py-4 border border-indigo-100 rounded-md"
+            className="px-6 py-4 border border-indigo-100 rounded-md dark:border-gray-800"
           >
             <a
               href={`https://github.com/${repo.nameWithOwner}`}
-              className="block mb-1 text-lg font-semibold text-indigo-700 hover:underline"
+              className="block mb-1 text-lg font-semibold text-indigo-700 dark:text-indigo-500 hover:underline"
             >
               {repo.name}
             </a>
-            <p className="mb-4 text-gray-800">{repo.description}</p>
-            <div className="flex text-gray-700">
-              <div className="mr-4 text-gray-800">
+            <p className="mb-4 text-gray-800 dark:text-gray-300">
+              {repo.description}
+            </p>
+            <div className="flex text-gray-700 dark:text-gray-600">
+              <div className="mr-4 text-gray-800 dark:text-gray-500">
                 <svg
                   className="inline-flex h-4 mb-px"
                   xmlns="http://www.w3.org/2000/svg"

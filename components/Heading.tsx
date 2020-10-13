@@ -27,7 +27,7 @@ const Heading = ({
     {
       className: unstyled
         ? className
-        : clsx('font-bold', headingStyles[level], className),
+        : clsx('font-bold dark:text-white', headingStyles[level], className),
     },
     children
   )

@@ -21,6 +21,14 @@ pre[class*='language-'] {
   hyphens: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    color: #bfc7cc;
+    background: #1f1f1f;
+  }
+}
+
 code[class*='language-']::-moz-selection,
 pre[class*='language-']::-moz-selection,
 code[class*='language-'] ::-moz-selection,

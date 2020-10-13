@@ -1,4 +1,8 @@
 module.exports = {
+  dark: 'media',
+  experimental: {
+    darkModeVariant: true,
+  },
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -47,8 +51,6 @@ module.exports = {
 
           // Remove additional quotes
           code: {
-            color: theme('colors.indigo.800'),
-            backgroundColor: theme('colors.indigo.100'),
             fontWeight: '600',
           },
           'code::before': {

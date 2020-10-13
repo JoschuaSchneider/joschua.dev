@@ -33,7 +33,11 @@ const Blog = () => {
             href={`/blog/${slugFromFrontmatter(matter)}`}
           >
             <a>
-              <Heading level="h3" className="text-2xl font-semibold" unstyled>
+              <Heading
+                level="h3"
+                className="text-2xl font-semibold dark:text-white"
+                unstyled
+              >
                 {matter.title}
               </Heading>
               <Text>{matter.summary}</Text>

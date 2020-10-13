@@ -8,7 +8,12 @@ type Props = {
 }
 
 const Text = ({ children, unstyled = false, className }: Props) => (
-  <p className={clsx(!unstyled && 'text-gray-800 mb-2', className)}>
+  <p
+    className={clsx(
+      !unstyled && 'text-gray-800 dark:text-gray-300 mb-2',
+      className
+    )}
+  >
     {children}
   </p>
 )
