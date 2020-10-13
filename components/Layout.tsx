@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <nav
-      className="sticky top-0 py-8 mt-8"
+      className="sticky top-0 z-50 py-8 mt-8"
       style={{
         background: 'rgba(255,255,255,0.85)',
       }}

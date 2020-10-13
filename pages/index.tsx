@@ -62,8 +62,8 @@ const Index = ({ repos }: { repos: any[] }) => (
       title="Joschua Schneider"
       description="Developer and CS Student from Germany, creating modern Web-Applications, tooling and learing resources."
     />
-    <Container className="my-8">
-      <Heading level="h1" className="mb-4">
+    <Container className="mt-8 mb-12">
+      <Heading level="h1" className="mb-6">
         Hey, I'm Joschua
       </Heading>
       <Text>
