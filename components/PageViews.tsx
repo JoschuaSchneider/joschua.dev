@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import loadFirebase from 'utils/firebase'
 
 const PageViews = ({
   slug,
@@ -13,27 +12,20 @@ const PageViews = ({
   const [views, setViews] = useState(null)
 
   useEffect(() => {
-    let firebase: firebase.database.Database | null = null
+    const loadViews = async () => {
+      /** Send bypass parameter when updating the view count */
+      const response = await fetch(
+        `/api/page-views?slug=${encodeURIComponent(slug)}&increment=${
+          increment ? 'true&_vercel_no_cache=1' : 'false'
+        }`
+      )
 
-    const onValue = (snapshot: firebase.database.DataSnapshot) =>
-      setViews(snapshot.val())
+      const data = await response.json()
 
-    const getViews = async () => {
-      firebase = await loadFirebase()
-      firebase.ref('views').child(slug).on('value', onValue)
+      setViews(data.views)
     }
 
-    getViews()
-
-    return () => {
-      if (firebase) firebase.ref('views').child(slug).off('value', onValue)
-    }
-  }, [slug])
-
-  useEffect(() => {
-    if (increment) {
-      fetch(`/api/increment-page-views?slug=${encodeURIComponent(slug)}`)
-    }
+    loadViews()
   }, [increment])
 
   if (reveal && views === null) return null
