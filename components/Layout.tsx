@@ -15,9 +15,11 @@ const Layout = ({ children }: Props) => (
     <nav className="sticky top-0 z-50 py-8 mt-8 nav">
       <div className="flex items-center justify-between max-w-4xl px-8 mx-auto">
         <div className="">
-          <div className="flex items-center justify-center w-8 h-8 font-mono text-xl text-white bg-indigo-800 rounded-sm">
-            js
-          </div>
+          <Link href="/">
+            <a className="flex items-center justify-center w-8 h-8 font-mono text-xl text-white bg-indigo-800 rounded-sm">
+              js
+            </a>
+          </Link>
         </div>
         <div className="flex text-gray-900 dark:text-gray-200">
           <Link href="/uses">
