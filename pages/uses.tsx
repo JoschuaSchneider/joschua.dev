@@ -84,7 +84,7 @@ const Uses = () => (
             <p>
               The theme is a modified Version of <strong>One Dark Pro</strong>
             </p>
-            <img src="/uses-vscode.jpg" alt="" />
+            <img src="/uses-vscode.png" alt="" />
           </li>
           <li>
             <p>
