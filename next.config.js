@@ -16,4 +16,13 @@ module.exports = withMdxEnhanced({
       readingTime: readingTime(mdxContent),
     }),
   },
-})({})
+})({
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      const generateSitemap = require('./scripts/generate-sitemap')
+      generateSitemap()
+    }
+
+    return config
+  },
+})
