@@ -6,7 +6,13 @@ import { DefaultSeo } from 'next-seo'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
-    <DefaultSeo titleTemplate="%s - Developer, CS Student from Germany" />
+    <DefaultSeo
+      titleTemplate="%s - Developer, CS Student from Germany"
+      twitter={{
+        cardType: 'summary',
+        site: '@joschuadev',
+      }}
+    />
     <Component {...pageProps} />
   </>
 )
