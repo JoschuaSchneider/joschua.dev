@@ -10,8 +10,15 @@ import { FrontMatter } from 'interfaces'
 import PageViews from 'components/PageViews'
 import { NextSeo } from 'next-seo'
 
+/**
+ * Sort by Name if date is the same.
+ * This prevents reordering in SSR and rehydration.
+ */
 const sortedBlogFrontMatter = blogFrontMatter.sort(
   (a: FrontMatter, b: FrontMatter) => {
+    if (postDate(a).isSame(postDate(b))) {
+      return a.title < b.title ? -1 : a.title > b.title ? 1 : 0
+    }
     return postDate(a).isAfter(postDate(b)) ? -1 : 1
   }
 )
