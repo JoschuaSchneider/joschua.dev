@@ -31,7 +31,7 @@ const Blog = () => {
         description={`Tips and tricks on modern web-development.`}
       />
       <Container className="my-8">
-        <Heading level="h1" className="mb-6">
+        <Heading level="h1" className="mb-8">
           Blog Posts
         </Heading>
         {sortedBlogFrontMatter.map((matter: FrontMatter) => (
