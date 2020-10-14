@@ -44,7 +44,7 @@ const Layout = ({ children }: Props) => (
     <main>{children}</main>
     <footer className="flex mb-20">
       <div className="px-8 mx-auto mt-20">
-        <div className="flex items-center justify-center mb-6 space-x-6 text-gray-700">
+        <div className="flex items-center justify-center mb-6 space-x-6 text-gray-700 dark:text-gray-500">
           <a
             href="https://twitter.com/joschuadev"
             className="flex items-center"
@@ -94,7 +94,19 @@ const Layout = ({ children }: Props) => (
             </svg>
           </a>
         </div>
-        <p className="text-xs text-gray-600">© 2020 Joschua Schneider</p>
+        <p className="mb-2 text-xs text-center text-gray-600">
+          © 2020 Joschua Schneider
+        </p>
+        <p className="text-xs text-center text-gray-600 dark:text-gray-600">
+          v2 – (
+          <a
+            href="https://joschuaschneider-v1.netlify.app/"
+            className="text-indigo-500 hover:underline"
+          >
+            v1
+          </a>
+          )
+        </p>
       </div>
     </footer>
   </>
