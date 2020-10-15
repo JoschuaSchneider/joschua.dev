@@ -9,19 +9,19 @@ const Uses = () => (
   <Layout>
     <NextSeo title="Uses" description="Technologies and tools I use." />
     <Container className="mt-8">
-      <div
-        className="px-6 py-6 rounded"
-        style={{
-          backgroundImage: `url(${unsplashById('dpCgZJoneZM', 709, 200)})`,
-        }}
-      >
-        <Heading level="h1" className="mb-2 text-white">
-          Uses
-        </Heading>
-        <Text unstyled className="text-lg text-white">
-          Tech and Tools I currently use.
-        </Text>
-      </div>
+      <Heading level="h1" className="mb-2 dark:text-white">
+        Uses
+      </Heading>
+      <Text unstyled className="mb-8 text-lg dark:text-white">
+        Tech and Tools I currently use.
+      </Text>
+      <img
+        src="/uses-macbook.png"
+        width="744"
+        height="543"
+        className="origin-center transform scale-110"
+        alt=""
+      />
     </Container>
     <Container className="mt-6 mb-12">
       <div className="prose max-w-none">
