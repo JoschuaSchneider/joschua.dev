@@ -16,8 +16,8 @@ const Uses = () => (
       </Text>
       <img
         src="/uses-macbook.png"
-        width="744"
-        height="543"
+        width="704"
+        height="493"
         className="origin-center transform scale-110"
         alt=""
       />
