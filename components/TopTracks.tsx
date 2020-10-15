@@ -21,7 +21,7 @@ const TrackPlaceholder = ({ index }: { index: number }) => (
       <div className="w-32 h-4 mb-3 bg-gray-200 rounded dark:bg-gray-800"></div>
       <div className="w-20 h-4 bg-gray-200 rounded dark:bg-gray-800"></div>
     </div>
-    <div className="flex items-center justify-center ml-auto text-4xl font-bold tracking-wider text-gray-300 dark:text-gray-800">
+    <div className="items-center justify-center hidden ml-auto text-4xl font-bold tracking-wider text-gray-300 md:flex dark:text-gray-800">
       <span>
         <span className="text-lg align-baseline">#</span>
         {index + 1}
