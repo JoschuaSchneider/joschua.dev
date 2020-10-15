@@ -13,20 +13,24 @@ const MacbookDisplay = () => {
 
   return (
     <motion.img
-      initial={{
-        y: -40,
-        rotateX: 20,
-        perspective: 1000,
-        opacity: 0,
-      }}
-      animate={{
-        y: 0,
-        rotateX: 0,
-        perspective: 1000,
-        opacity: 1,
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          y: -40,
+          rotateX: 20,
+          perspective: 1000,
+          opacity: 0,
+        },
+        visible: {
+          y: 0,
+          rotateX: 0,
+          perspective: 1000,
+          opacity: 1,
+        },
       }}
       transition={{
-        delay: 0.1,
+        delay: 0.3,
         duration: 0.5,
       }}
       style={{
@@ -39,7 +43,7 @@ const MacbookDisplay = () => {
       width="704"
       height="493"
       className="z-0"
-      alt=""
+      alt="Top View of my MacBook Pro with Stickers."
     />
   )
 }
