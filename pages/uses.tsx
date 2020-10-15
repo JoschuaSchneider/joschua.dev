@@ -10,6 +10,7 @@ const MacbookDisplay = () => {
   const translateY = useTransform(scrollY, [0, 700], [0, -100])
   const rotate = useTransform(scrollY, [0, 700], [0, 80])
   const scale = useTransform(scrollY, [0, 700], [1.1, 0.7])
+  const opacity = useTransform(scrollY, [0, 700], [1, 0.3])
 
   return (
     <motion.img
@@ -34,6 +35,7 @@ const MacbookDisplay = () => {
         rotateX: rotate,
         perspective: 1000,
         scale,
+        opacity,
       }}
       src="/uses-macbook.png"
       width="704"
