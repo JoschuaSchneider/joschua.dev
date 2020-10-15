@@ -6,10 +6,10 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
 const MacbookDisplay = () => {
-  const { scrollYProgress } = useViewportScroll()
-  const translateY = useTransform(scrollYProgress, [0, 0.5], [0, -100])
-  const rotate = useTransform(scrollYProgress, [0, 0.5], [0, 80])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1.1, 0.8])
+  const { scrollY } = useViewportScroll()
+  const translateY = useTransform(scrollY, [0, 700], [0, -100])
+  const rotate = useTransform(scrollY, [0, 700], [0, 80])
+  const scale = useTransform(scrollY, [0, 700], [1.1, 0.8])
 
   return (
     <motion.img
