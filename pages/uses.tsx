@@ -9,7 +9,7 @@ const MacbookDisplay = () => {
   const { scrollY } = useViewportScroll()
   const translateY = useTransform(scrollY, [0, 700], [0, -100])
   const rotate = useTransform(scrollY, [0, 700], [0, 80])
-  const scale = useTransform(scrollY, [0, 700], [1.1, 0.8])
+  const scale = useTransform(scrollY, [0, 700], [1.1, 0.5])
 
   return (
     <motion.img
