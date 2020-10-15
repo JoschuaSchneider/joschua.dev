@@ -11,7 +11,7 @@ const Uses = () => (
       <Heading level="h1" className="mb-2 dark:text-white">
         Uses
       </Heading>
-      <Text unstyled className="mb-8 text-lg dark:text-white">
+      <Text unstyled className="mb-12 text-lg dark:text-white">
         Tech and Tools I currently use.
       </Text>
       <img
