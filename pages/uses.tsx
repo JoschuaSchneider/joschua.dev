@@ -2,7 +2,47 @@ import Container from 'components/Container'
 import Heading from 'components/Heading'
 import Layout from 'components/Layout'
 import Text from 'components/Text'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+
+const MacbookDisplay = () => {
+  const { scrollYProgress } = useViewportScroll()
+  const translateY = useTransform(scrollYProgress, [0, 0.5], [0, -100])
+  const rotate = useTransform(scrollYProgress, [0, 0.5], [0, 80])
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1.1, 0.8])
+
+  return (
+    <motion.img
+      initial={{
+        y: -40,
+        rotateX: 20,
+        perspective: 1000,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        rotateX: 0,
+        perspective: 1000,
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.1,
+        duration: 0.5,
+      }}
+      style={{
+        y: translateY,
+        rotateX: rotate,
+        perspective: 1000,
+        scale,
+      }}
+      src="/uses-macbook.png"
+      width="704"
+      height="493"
+      className="z-0"
+      alt=""
+    />
+  )
+}
 
 const Uses = () => (
   <Layout>
@@ -14,15 +54,9 @@ const Uses = () => (
       <Text unstyled className="mb-12 text-lg dark:text-white">
         Tech and Tools I currently use.
       </Text>
-      <img
-        src="/uses-macbook.png"
-        width="704"
-        height="493"
-        className="origin-center transform scale-110"
-        alt=""
-      />
+      <MacbookDisplay />
     </Container>
-    <Container className="mt-6 mb-12">
+    <Container className="relative z-10 mt-6 mb-12">
       <div className="prose max-w-none">
         <div className="flex flex-wrap justify-between w-full md:flex-no-wrap">
           <div className="pr-12">
