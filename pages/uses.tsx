@@ -7,7 +7,6 @@ import { NextSeo } from 'next-seo'
 
 const MacbookDisplay = () => {
   const { scrollY } = useViewportScroll()
-  const translateY = useTransform(scrollY, [0, 700], [0, -100])
   const rotate = useTransform(scrollY, [0, 700], [0, 80])
   const scale = useTransform(scrollY, [0, 700], [1.1, 0.7])
   const opacity = useTransform(scrollY, [200, 700], [1, 0.3])
@@ -31,7 +30,6 @@ const MacbookDisplay = () => {
         duration: 0.5,
       }}
       style={{
-        y: translateY,
         rotateX: rotate,
         perspective: 1000,
         scale,
