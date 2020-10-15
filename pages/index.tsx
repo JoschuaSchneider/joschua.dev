@@ -7,6 +7,7 @@ import Skill, { getYearDifference } from 'components/Skill'
 import Text from 'components/Text'
 import { GetStaticProps } from 'next'
 import { queryGithubAPI } from 'utils/github-api'
+import TopTracks from 'components/TopTracks'
 
 export const getStaticProps: GetStaticProps = async () => {
   const repos = await queryGithubAPI(`#graphql
@@ -142,6 +143,12 @@ const Index = ({ repos }: { repos: any[] }) => (
           </div>
         ))}
       </div>
+    </Container>
+    <Container className="my-12">
+      <Heading level="h2" className="mb-8">
+        Top Tracks
+      </Heading>
+      <TopTracks />
     </Container>
   </Layout>
 )

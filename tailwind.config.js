@@ -75,7 +75,10 @@ module.exports = {
       },
     }),
   },
-  variants: {},
+  variants: {
+    gradientColorStops: ['dark'],
+    backgroundImage: ['responsive', 'dark'],
+  },
   plugins: [
     require('@tailwindcss/typography')({
       modifiers: [],

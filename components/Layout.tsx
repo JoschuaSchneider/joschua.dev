@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Container from './Container'
+import CurrentTrack from './CurrentTrack'
 
 type Props = {
   children?: ReactNode
@@ -44,8 +46,11 @@ const Layout = ({ children }: Props) => (
       </div>
     </nav>
     <main>{children}</main>
-    <footer className="flex mb-20">
-      <div className="px-8 mx-auto mt-20">
+    <footer className="pt-20 mb-20">
+      <Container className="">
+        <CurrentTrack />
+      </Container>
+      <Container className="px-8 mx-auto mt-20">
         <div className="flex items-center justify-center mb-6 space-x-6 text-gray-700 dark:text-gray-500">
           <a
             href="https://twitter.com/joschuadev"
@@ -109,7 +114,7 @@ const Layout = ({ children }: Props) => (
           </a>
           )
         </p>
-      </div>
+      </Container>
     </footer>
   </>
 )
