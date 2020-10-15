@@ -3,7 +3,6 @@ import Heading from 'components/Heading'
 import Layout from 'components/Layout'
 import Text from 'components/Text'
 import { NextSeo } from 'next-seo'
-import { unsplashById } from 'utils/unsplash'
 
 const Uses = () => (
   <Layout>
