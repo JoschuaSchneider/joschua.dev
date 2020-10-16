@@ -60,7 +60,25 @@ const ContactForm = () => {
         />
       </label>
       <label className="block col-span-2">
-        <span className="block mb-1 dark:text-white">Whats up?</span>
+        <span className="block mb-1 dark:text-white">
+          What are you contacting me about?
+        </span>
+        <select
+          required
+          className="block w-full form-select dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+          name="topic"
+        >
+          <option value="General Questions">General Questions</option>
+          <option value="Project Request / Cost Estimate">
+            Project Request / Cost Estimate
+          </option>
+          <option value="Feedback, Errors & Bugs">
+            Feedback, Errors & Bugs
+          </option>
+        </select>
+      </label>
+      <label className="block col-span-2">
+        <span className="block mb-1 dark:text-white">Tell me about it:</span>
         <textarea
           required
           className="block w-full form-textarea dark:bg-gray-800 dark:border-gray-700 dark:text-white"

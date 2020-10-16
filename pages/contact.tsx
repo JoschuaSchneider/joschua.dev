@@ -43,6 +43,14 @@ const Contact = () => {
             GitHub @JoschuaSchneider
           </a>
         </Text>
+        <Text>
+          <a
+            className="text-indigo-600 dark:text-indigo-400 hover:underline"
+            href="https://www.linkedin.com/in/joschua-schneider"
+          >
+            LinkedIn @joschua-schneider
+          </a>
+        </Text>
       </Container>
       <Container className="my-12">
         <Text className="mb-8 font-semibold">
