@@ -8,6 +8,7 @@ import Text from 'components/Text'
 import { GetStaticProps } from 'next'
 import { queryGithubAPI } from 'utils/github-api'
 import TopTracks from 'components/TopTracks'
+import ContactForm from 'components/ContactForm'
 
 export const getStaticProps: GetStaticProps = async () => {
   const repos = await queryGithubAPI(`#graphql

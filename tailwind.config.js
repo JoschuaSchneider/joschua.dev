@@ -78,10 +78,12 @@ module.exports = {
   variants: {
     gradientColorStops: ['dark'],
     backgroundImage: ['responsive', 'dark'],
+    opacity: ['responsive', 'disabled'],
   },
   plugins: [
     require('@tailwindcss/typography')({
       modifiers: [],
     }),
+    require('@tailwindcss/custom-forms'),
   ],
 }
