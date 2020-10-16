@@ -40,10 +40,7 @@ const Layout = ({ children }: Props) => (
             </a>
           </Link>
           <Link href="/">
-            <a
-              href="#"
-              className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-900"
-            >
+            <a className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-900">
               Home
             </a>
           </Link>
