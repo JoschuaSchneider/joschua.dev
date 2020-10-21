@@ -106,18 +106,8 @@ const Services = () => {
             That strongly depends on your needs and the scale of the project.
           </p>
           <p>
-            Static sites with only the most important pages (Home, Contact,
-            Imprint/GDPR) and/or a simple design start from{' '}
-            <strong>1.000€</strong>.
-          </p>
-          <p>
-            If you need a lot of dynamic content, API integrations or
-            Authentication your project will start from <strong>2.500€</strong>.
-          </p>
-          <p>
             You can contact me with a rough overview of what you need. I will
-            get back to you with an estimated price or some more questions about
-            your project.
+            get back to you with an estimated price.
           </p>
         </div>
         <Link href="/contact">
