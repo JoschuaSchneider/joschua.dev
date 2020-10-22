@@ -8,6 +8,7 @@ import Text from 'components/Text'
 import { GetStaticProps } from 'next'
 import { queryGithubAPI } from 'utils/github-api'
 import TopTracks from 'components/TopTracks'
+import Link from 'next/link'
 
 export const getStaticProps: GetStaticProps = async () => {
   const repos = await queryGithubAPI(`#graphql
@@ -72,6 +73,16 @@ const Index = ({ repos }: { repos: any[] }) => (
         applications, tooling and learning resources. Coding has been my passion
         for over {getYearDifference(2010)} years and my particular interest in
         Web Development now makes up the majority of my experience.
+      </Text>
+      <Text className="mt-6">
+        <Link href="/contact">
+          <a
+            href=""
+            className="text-lg font-semibold text-indigo-600 dark:text-indigo-500 hover:underline"
+          >
+            Get in touch with me →
+          </a>
+        </Link>
       </Text>
     </Container>
     <Container className="my-12">
