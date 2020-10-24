@@ -17,6 +17,15 @@ module.exports = withMdxEnhanced({
     }),
   },
 })({
+  async redirects() {
+    return [
+      {
+        source: '/s/:shortcode',
+        destination: '/api/short/:shortcode',
+        permanent: true,
+      },
+    ]
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       const generateSitemap = require('./scripts/generate-sitemap')
