@@ -1,17 +1,24 @@
 import { FormEvent, useRef, useState } from 'react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 const ContactForm = () => {
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setSubmitting(true)
     setSuccess(false)
+    setError(null)
     e.preventDefault()
     if (formRef.current) {
+      const token = await executeRecaptcha?.('contact_form')
+
       const form = formRef.current
       const data = new FormData(form)
+      data.append('g-recaptcha-response', token || '')
 
       try {
         await fetch(form.action, {
@@ -26,10 +33,12 @@ const ContactForm = () => {
       } catch (error) {
         setSubmitting(false)
         setSuccess(false)
+        setError('Something went wrong, please try again later!')
       }
     } else {
       setSubmitting(false)
       setSuccess(false)
+      setError('Something went wrong, please try again later!')
     }
   }
 
@@ -95,6 +104,11 @@ const ContactForm = () => {
       {success && (
         <div className="block w-full col-span-2 px-4 py-2 font-semibold text-center text-white bg-green-500 rounded dark:bg-green-600">
           Thanks, I will get back to you soon!
+        </div>
+      )}
+      {error && (
+        <div className="block w-full col-span-2 px-4 py-2 font-semibold text-center text-white bg-red-500 rounded dark:bg-red-600">
+          {error}
         </div>
       )}
     </form>
