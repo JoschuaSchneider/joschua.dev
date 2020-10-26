@@ -1,0 +1,36 @@
+---
+title: 'Fixing wrong BIOS Update of a Lenovo V510 Notebook'
+summary: How to recover from a failed BIOS update with Black-Screen on Boot. (BIOS 2WCN46WW)
+unsplash: FhQMTa9Eqo8
+date: 2020-09-29
+---
+
+## What happened?
+
+After updating the BIOS of an **Lenovo V510-15IKB** Laptop, I was stuck on a Black screen after the update finished.
+
+I updated the BIOS from an unknown Version to **Version 2WCN46WW** and missed this notice:
+
+> If your BIOS version is lower than 2WCN42WW, please update to 2WCN42WW firstly.
+
+## Solution
+
+After searching through dozens of old Forum Posts, I pieced together this key information:
+
+- The BIOS might not be corrupted
+- Completely draining the power might resolve the issue
+- Press the power button multiple times after disconnecting all power or leave it over night
+
+**Step by step instructions:**
+
+Please make sure not to damage your device or contact the Support or a Professional first.
+
+1. Disconnect the AC/Wall Power
+2. Open the Laptop ([Tutorial + Disconnecting Battery](https://www.youtube.com/watch?v=IV8CFRRjlUs&ab_channel=eShamsTechTips))
+3. Disconnect the Battery
+4. Remove the [CMOS Battery](https://www.computerhope.com/jargon/c/cmos.jpg)
+5. Repeatedly press the Power button for about **30-40** Seconds (or leave the device over night)
+6. Reassemble everything, plug in the Power and try to boot.
+
+I tried this twice, but did not know about step 6 the first time.
+The second attempt including step 6 fixed the black screen and the Laptop booted into Windows.
