@@ -25,6 +25,10 @@ body {
     background-color: rgba(0, 0, 0, 0.85);
   }
 
+  .prose blockquote {
+    @apply text-gray-100;
+  }
+
   .prose code {
     @apply text-indigo-500 bg-indigo-900 bg-opacity-25;
   }
