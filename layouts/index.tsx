@@ -7,6 +7,7 @@ import { unsplashById } from 'utils/unsplash'
 import { FrontMatter } from 'interfaces'
 import PageViews from 'components/PageViews'
 import { formatPostDate, slugFromFrontmatter } from 'utils/blog'
+import Image from 'next/image'
 
 const BlogLayout = ({
   children,
@@ -18,10 +19,10 @@ const BlogLayout = ({
   return (
     <Layout>
       <NextSeo description={frontMatter.summary} {...frontMatter} />
-      <Container className="my-8">
+      <Container className="pb-8 mt-8">
         <Heading level="h1">{frontMatter.title}</Heading>
-        <div className="flex items-center justify-between mt-4">
-          <p className="text-gray-700">Joschua Schneider</p>
+        <div className="flex flex-wrap items-center justify-between mt-4 md:flex-no-wrap">
+          <p className="text-gray-700 dark:text-gray-500">Joschua Schneider</p>
           <p className="text-sm text-gray-600">
             <PageViews slug={slugFromFrontmatter(frontMatter)} increment />
             <span className="mx-2">–</span>
@@ -30,24 +31,26 @@ const BlogLayout = ({
             {formatPostDate(frontMatter)}
           </p>
         </div>
-      </Container>
-      <Container as="article" className="mt-12 mb-8 prose">
         {frontMatter.image && (
-          <img
-            width="704"
-            height="300"
-            className="object-cover w-full mt-8 rounded-sm"
+          <Image
+            width={704}
+            height={300}
+            quality={90}
+            className="block object-cover mt-8 rounded-sm"
             src={frontMatter.image}
           />
         )}
         {frontMatter.unsplash && (
-          <img
-            width="704"
-            height="300"
-            className="object-cover w-full mt-8 rounded-sm"
+          <Image
+            width={704}
+            height={300}
+            quality={90}
+            className="block object-cover mt-8 rounded-sm"
             src={unsplashById(frontMatter.unsplash, 704, 300)}
           />
         )}
+      </Container>
+      <Container as="article" className="my-12 prose">
         {children}
       </Container>
     </Layout>

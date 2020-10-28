@@ -2,6 +2,7 @@ import Container from 'components/Container'
 import Heading from 'components/Heading'
 import Layout from 'components/Layout'
 import Text from 'components/Text'
+import Image from 'next/image'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
@@ -12,7 +13,7 @@ const MacbookDisplay = () => {
   const opacity = useTransform(scrollY, [200, 700], [1, 0.3])
 
   return (
-    <motion.img
+    <motion.div
       initial="hidden"
       animate="visible"
       variants={{
@@ -39,12 +40,16 @@ const MacbookDisplay = () => {
         scale,
         opacity,
       }}
-      src="/uses-macbook.png"
-      width="704"
-      height="493"
       className="z-0"
-      alt="Top View of my MacBook Pro with Stickers."
-    />
+    >
+      <Image
+        src="/uses-macbook.png"
+        width={704}
+        height={493}
+        quality={100}
+        alt="Top View of my MacBook Pro with Stickers."
+      />
+    </motion.div>
   )
 }
 
@@ -121,7 +126,12 @@ const Uses = () => (
             <p>
               The theme is a modified Version of <strong>One Dark Pro</strong>
             </p>
-            <img src="/uses-vscode.png" alt="" />
+            <img
+              width={676}
+              height={429}
+              src="/uses-vscode.png"
+              alt="Screenshot of my VSCode theme"
+            />
           </li>
           <li>
             <p>
@@ -129,7 +139,7 @@ const Uses = () => (
             </p>
             <p>My terminal configuration is synced between OSX and WSL2.</p>
             <p>Oh My Zsh, zplug, p10k</p>
-            <img src="/uses-shell.jpg" alt="" />
+            <img src="/uses-shell.jpg" alt="Screenshot of my shell theme" />
           </li>
         </ul>
         <h2>Graphic Design & Prototyping</h2>

@@ -17,6 +17,9 @@ module.exports = withMdxEnhanced({
     }),
   },
 })({
+  images: {
+    domains: ['source.unsplash.com'],
+  },
   async redirects() {
     return [
       {
