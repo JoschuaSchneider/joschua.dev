@@ -61,7 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const Index = ({ repos }: { repos: any[] }) => (
   <Layout>
     <NextSeo
-      title="Joschua Schneider"
+      title="Developer, CS Student from Germany"
       description="Developer and CS Student from Germany, creating modern Web-Applications, tooling and learing resources."
     />
     <Container className="mt-8 mb-12">
