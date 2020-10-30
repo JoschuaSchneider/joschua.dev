@@ -16,9 +16,25 @@ const BlogLayout = ({
   children: ReactNode
   frontMatter: FrontMatter
 }) => {
+  const hasImage = !!frontMatter.unsplash
+
   return (
     <Layout>
-      <NextSeo description={frontMatter.summary} {...frontMatter} />
+      <NextSeo
+        description={frontMatter.summary}
+        openGraph={
+          hasImage
+            ? {
+                images: [
+                  {
+                    url: unsplashById(frontMatter.unsplash, 1299, 628),
+                  },
+                ],
+              }
+            : {}
+        }
+        {...frontMatter}
+      />
       <Container className="pb-8 mt-8">
         <Heading level="h1">{frontMatter.title}</Heading>
         <div className="flex flex-wrap items-center justify-between mt-4 md:flex-no-wrap">
@@ -31,16 +47,7 @@ const BlogLayout = ({
             {formatPostDate(frontMatter)}
           </p>
         </div>
-        {frontMatter.image && (
-          <Image
-            width={704}
-            height={300}
-            quality={90}
-            className="block object-cover mt-8 rounded-sm"
-            src={frontMatter.image}
-          />
-        )}
-        {frontMatter.unsplash && (
+        {hasImage && (
           <Image
             width={704}
             height={300}

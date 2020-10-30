@@ -2,9 +2,10 @@
  * Get unsplash url for given photoId with optional resizing
  */
 export const unsplashById = (
-  photoId: string,
+  photoId?: string,
   width: number = 900,
   height: number = 700
 ): string => {
+  if (!photoId) return ''
   return `https://source.unsplash.com/${photoId}/${width}x${height}`
 }
