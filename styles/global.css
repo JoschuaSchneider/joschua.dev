@@ -22,6 +22,10 @@ body {
   text-overflow: ellipsis;
 }
 
+.prose .heading-link {
+  @apply text-gray-900;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     @apply bg-black;
@@ -51,6 +55,10 @@ body {
   .prose h2,
   .prose h3,
   .prose h4 {
+    @apply text-white;
+  }
+
+  .prose .heading-link {
     @apply text-white;
   }
 }

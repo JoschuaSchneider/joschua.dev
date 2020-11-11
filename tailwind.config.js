@@ -21,21 +21,30 @@ module.exports = {
     typography: (theme) => ({
       default: {
         css: {
+          '> :first-child': false,
           h1: {
             color: theme('colors.black'),
             fontWeight: '700',
+            marginTop: '-120px',
+            paddingTop: '140px',
           },
           h2: {
             color: theme('colors.black'),
             fontWeight: '700',
+            marginTop: '-120px',
+            paddingTop: '135px',
           },
           h3: {
             color: theme('colors.black'),
             fontWeight: '600',
+            marginTop: '-120px',
+            paddingTop: '130px',
           },
           h4: {
             color: theme('colors.black'),
             fontWeight: '600',
+            marginTop: '-120px',
+            paddingTop: '120px',
           },
           strong: {
             color: theme('colors.gray.800'),
