@@ -155,12 +155,6 @@ const Index = ({ repos }: { repos: any[] }) => (
         ))}
       </div>
     </Container>
-    <Container className="my-12">
-      <Heading level="h2" className="mb-8">
-        Top Tracks
-      </Heading>
-      <TopTracks />
-    </Container>
   </Layout>
 )
 
