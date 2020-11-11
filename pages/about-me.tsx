@@ -4,6 +4,7 @@ import Layout from 'components/Layout'
 import Text from 'components/Text'
 import TopTracks from 'components/TopTracks'
 import { NextSeo } from 'next-seo'
+import Image from 'next/image'
 
 const AboutMe = () => (
   <Layout>
@@ -31,27 +32,39 @@ const AboutMe = () => (
       </Heading>
       <div className="grid grid-cols-3 gap-6 md:grid-cols-4">
         <a href="https://syntax.fm/" className="overflow-hidden rounded-md">
-          <img
+          <Image
+            width={158}
+            height={158}
             src="/podcasts/syntax-fm.jpg"
             className="w-full h-full"
             alt="SyntaxFM Podcast"
           />
         </a>
         <a href="https://pca.st/bWXP" className="overflow-hidden rounded-md">
-          <img
+          <Image
+            width={158}
+            height={158}
             src="/podcasts/react-podcast.jpg"
             className="w-full h-full"
             alt="React Podcast"
           />
         </a>
         <a href="https://pca.st/jFUY" className="overflow-hidden rounded-md">
-          <img src="/podcasts/http-203.jpg" className="w-full h-full" alt="" />
+          <Image
+            width={158}
+            height={158}
+            src="/podcasts/http-203.jpg"
+            className="w-full h-full"
+            alt=""
+          />
         </a>
         <a
           href="https://pca.st/fullstack"
           className="overflow-hidden rounded-md"
         >
-          <img
+          <Image
+            width={158}
+            height={158}
             src="/podcasts/fullstack-radio.jpg"
             className="w-full h-full"
             alt="Full Stack Radio Podcast"
@@ -61,7 +74,9 @@ const AboutMe = () => (
           href="https://pca.st/darknetdiaries"
           className="overflow-hidden rounded-md"
         >
-          <img
+          <Image
+            width={158}
+            height={158}
             src="/podcasts/darknet-diaries.jpg"
             className="w-full h-full"
             alt="Darknet Diaries Podcast"
