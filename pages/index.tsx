@@ -7,7 +7,6 @@ import Skill, { getYearDifference } from 'components/Skill'
 import Text from 'components/Text'
 import { GetStaticProps } from 'next'
 import { queryGithubAPI } from 'utils/github-api'
-import TopTracks from 'components/TopTracks'
 import Link from 'next/link'
 
 export const getStaticProps: GetStaticProps = async () => {
