@@ -1,10 +1,10 @@
 import Container from 'components/Container'
 import Heading from 'components/Heading'
 import Layout from 'components/Layout'
+import PodcastList from 'components/PodcastList'
 import Text from 'components/Text'
 import TopTracks from 'components/TopTracks'
 import { NextSeo } from 'next-seo'
-import Image from 'next/image'
 
 const AboutMe = () => (
   <Layout>
@@ -30,65 +30,7 @@ const AboutMe = () => (
       <Heading level="h2" className="mb-6">
         Podcasts
       </Heading>
-      <div className="grid grid-cols-3 gap-6 md:grid-cols-4">
-        <a href="https://syntax.fm/" className="overflow-hidden rounded-md">
-          <Image
-            width={158}
-            height={158}
-            src="/podcasts/syntax-fm.jpg"
-            className="w-full h-full"
-            alt="SyntaxFM Podcast"
-          />
-        </a>
-        <a href="https://pca.st/bWXP" className="overflow-hidden rounded-md">
-          <Image
-            width={158}
-            height={158}
-            src="/podcasts/react-podcast.jpg"
-            className="w-full h-full"
-            alt="React Podcast"
-          />
-        </a>
-        <a href="https://pca.st/jFUY" className="overflow-hidden rounded-md">
-          <Image
-            width={158}
-            height={158}
-            src="/podcasts/http-203.jpg"
-            className="w-full h-full"
-            alt=""
-          />
-        </a>
-        <a
-          href="https://pca.st/fullstack"
-          className="overflow-hidden rounded-md"
-        >
-          <Image
-            width={158}
-            height={158}
-            src="/podcasts/fullstack-radio.jpg"
-            className="w-full h-full"
-            alt="Full Stack Radio Podcast"
-          />
-        </a>
-        <a
-          href="https://pca.st/darknetdiaries"
-          className="overflow-hidden rounded-md"
-        >
-          <Image
-            width={158}
-            height={158}
-            src="/podcasts/darknet-diaries.jpg"
-            className="w-full h-full"
-            alt="Darknet Diaries Podcast"
-          />
-        </a>
-        <div className="flex items-center px-6 py-4 text-xl text-gray-700 rounded-md dark:text-gray-200 col-span-full md:col-span-3">
-          <span className="mr-4">🎧 </span>
-          <span className="italic">
-            "Keeping up with the community – while doing other stuff!"
-          </span>
-        </div>
-      </div>
+      <PodcastList />
     </Container>
     <Container className="my-12">
       <Text

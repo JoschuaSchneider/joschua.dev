@@ -1,0 +1,37 @@
+[
+  {
+    "name": "SyntaxFM",
+    "imageUrl": "/podcasts/syntax-fm.jpg",
+    "url": "https://syntax.fm/",
+    "emoji": "💛",
+    "comment": "Wes and Scott bring incredible amounts of positivity and knowledge to my development career. Twice a week!"
+  },
+  {
+    "name": "React Podcast",
+    "imageUrl": "/podcasts/react-podcast.jpg",
+    "url": "https://pca.st/bWXP",
+    "emoji": "👍",
+    "comment": "@chantastic interviews interesting guests from the community. With unmet enthusiasm and positivity."
+  },
+  {
+    "name": "HTTP 203",
+    "imageUrl": "/podcasts/http-203.jpg",
+    "url": "https://pca.st/jFUY",
+    "emoji": "💥",
+    "comment": "So, Jake and Surma explore complex topics and ask the right questions. The best source to keep up with Browser APIs!"
+  },
+  {
+    "name": "Full Stack Radio",
+    "imageUrl": "/podcasts/fullstack-radio.jpg",
+    "url": "https://pca.st/fullstack",
+    "emoji": "💫",
+    "comment": "Behind the scenes of tailwindlabs, statamic and other interesting projects. Also, valuable lessons in running a people-first business."
+  },
+  {
+    "name": "Darknet Diaries",
+    "imageUrl": "/podcasts/darknet-diaries.jpg",
+    "url": "https://pca.st/darknetdiaries",
+    "emoji": "🚨",
+    "comment": "Pentesting, Illegal activities and all things CyberSecurity. This podcasts pulls you down every rabbit hole there is."
+  }
+]
