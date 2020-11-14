@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import useSWR from 'swr'
 import Text from './Text'
 
