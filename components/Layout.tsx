@@ -24,11 +24,6 @@ const Layout = ({ children }: Props) => (
           </Link>
         </div>
         <div className="flex text-gray-900 dark:text-gray-200">
-          <Link href="/uses">
-            <a className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-900">
-              /uses
-            </a>
-          </Link>
           <Link href="/blog">
             <a className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-900">
               Blog
@@ -53,6 +48,17 @@ const Layout = ({ children }: Props) => (
         <CurrentTrack />
       </Container>
       <Container className="px-8 mx-auto mt-20">
+        <div className="flex items-center justify-center mb-6 space-x-6 font-mono">
+          <Link href="/blog">
+            <a className="text-gray-700 rounded dark:text-gray-600">/blog</a>
+          </Link>
+          <Link href="/contact">
+            <a className="text-gray-700 rounded dark:text-gray-600">/contact</a>
+          </Link>
+          <Link href="/uses">
+            <a className="text-gray-700 rounded dark:text-gray-600">/uses</a>
+          </Link>
+        </div>
         <div className="flex items-center justify-center mb-6 space-x-6 text-gray-700 dark:text-gray-500">
           <a
             href="https://twitter.com/joschuadev"

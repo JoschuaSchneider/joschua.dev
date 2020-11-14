@@ -5,6 +5,8 @@ import PodcastList from 'components/PodcastList'
 import Text from 'components/Text'
 import TopTracks from 'components/TopTracks'
 import { NextSeo } from 'next-seo'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutMe = () => (
   <Layout>
@@ -19,6 +21,28 @@ const AboutMe = () => (
         passion for over 10 years and my particular interest in Web Development
         now makes up the majority of my experience.
       </Text>
+    </Container>
+    <Container className="my-12">
+      <Link href="/uses">
+        <a className="flex flex-wrap items-center pl-4 border-l-2 border-gray-400 md:flex-no-wrap dark:border-gray-800 group">
+          <div className="">
+            <Image
+              width={180}
+              height={126}
+              src="/uses-macbook.png"
+              className="transition-transform duration-500 transform group-hover:scale-105"
+            />
+          </div>
+          <Text
+            className="px-4 pt-2 text-gray-700 rounded-md md:pl-8 dark:text-gray-400 md:pt-0"
+            unstyled
+          >
+            <span className="text-lg font-semibold">/uses</span>
+            <br />
+            <span>Technology, Gadgets and Tools that I use currently.</span>
+          </Text>
+        </a>
+      </Link>
     </Container>
     <Container className="my-12">
       <Text

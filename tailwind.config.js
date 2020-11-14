@@ -88,6 +88,7 @@ module.exports = {
     gradientColorStops: ['dark'],
     backgroundImage: ['responsive', 'dark'],
     opacity: ['responsive', 'disabled'],
+    scale: ['responsive', 'hover', 'group-hover'],
   },
   plugins: [
     require('@tailwindcss/typography')({
