@@ -17,6 +17,7 @@ const BlogLayout = ({
   frontMatter: FrontMatter
 }) => {
   const hasImage = !!frontMatter.unsplash
+  const slug = slugFromFrontmatter(frontMatter)
 
   return (
     <Layout>
@@ -40,7 +41,7 @@ const BlogLayout = ({
         <div className="flex flex-wrap items-center justify-between mt-4 md:flex-no-wrap">
           <p className="text-gray-700 dark:text-gray-500">Joschua Schneider</p>
           <p className="text-sm text-gray-600">
-            <PageViews slug={slugFromFrontmatter(frontMatter)} increment />
+            <PageViews slug={slug} increment />
             <span className="mx-2">–</span>
             {frontMatter.readingTime.text}
             <span className="mx-2">–</span>
@@ -59,6 +60,23 @@ const BlogLayout = ({
       </Container>
       <Container as="article" className="my-12 prose">
         {children}
+      </Container>
+      <Container className="my-12">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <script
+            src="https://utteranc.es/client.js"
+            repo="JoschuaSchneider/joschua-dev-comments"
+            issue-term="pathname"
+            label="comment"
+            theme="preferred-color-scheme"
+            crossOrigin="anonymous"
+            async
+          ></script>
+          `,
+          }}
+        ></div>
       </Container>
     </Layout>
   )
