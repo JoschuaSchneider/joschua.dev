@@ -95,6 +95,6 @@ module.exports = {
     require('@tailwindcss/typography')({
       modifiers: [],
     }),
-    require('@tailwindcss/custom-forms'),
+    require('@tailwindcss/forms'),
   ],
 }

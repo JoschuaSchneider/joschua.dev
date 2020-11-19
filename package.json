@@ -11,6 +11,7 @@
   "dependencies": {
     "@mdx-js/react": "^1.6.19",
     "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.2.0",
     "babel-plugin-import-glob-array": "^0.2.0",
     "chart.js": "^2.9.3",
