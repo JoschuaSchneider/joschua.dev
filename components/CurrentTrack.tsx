@@ -7,7 +7,7 @@ const CurrentTrack = () => {
   })
 
   return (
-    <div className="relative flex items-center p-4 bg-gray-100 rounded-md dark:bg-gray-900">
+    <div className="relative flex items-center p-4 rounded-md bg-gray-50 dark:bg-gray-900">
       {data && data.track && data.playing && (
         <>
           <img

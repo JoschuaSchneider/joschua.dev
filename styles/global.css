@@ -1,6 +1,7 @@
 html {
   @apply bg-white;
   scroll-behavior: smooth;
+  transition: background-color 0.1s;
 }
 
 @media (prefers-reduced-motion) {
@@ -15,6 +16,7 @@ body {
 
 .nav {
   background-color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.1s;
 }
 
 .overflow-ellipsis {
@@ -30,39 +32,37 @@ body {
   animation: spin 5s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    @apply bg-black;
-  }
+html.dark {
+  @apply bg-black;
+}
 
-  .nav {
-    background-color: rgba(0, 0, 0, 0.85);
-  }
+.dark .nav {
+  background-color: rgba(0, 0, 0, 0.85);
+}
 
-  .prose blockquote {
-    @apply text-gray-100;
-  }
+.dark .prose blockquote {
+  @apply text-gray-100;
+}
 
-  .prose code {
-    @apply text-indigo-500 bg-indigo-900 bg-opacity-25;
-  }
+.dark .prose code {
+  @apply text-indigo-500 bg-indigo-900 bg-opacity-25;
+}
 
-  .prose {
-    @apply text-white;
-  }
+.dark .prose {
+  @apply text-white;
+}
 
-  .prose strong {
-    @apply text-white;
-  }
+.dark .prose strong {
+  @apply text-white;
+}
 
-  .prose h1,
-  .prose h2,
-  .prose h3,
-  .prose h4 {
-    @apply text-white;
-  }
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4 {
+  @apply text-white;
+}
 
-  .prose .heading-link {
-    @apply text-white;
-  }
+.dark .prose .heading-link {
+  @apply text-white;
 }

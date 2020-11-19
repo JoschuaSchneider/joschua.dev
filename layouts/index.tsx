@@ -38,7 +38,7 @@ const BlogLayout = ({
       />
       <Container className="pb-8 mt-8">
         <Heading level="h1">{frontMatter.title}</Heading>
-        <div className="flex flex-wrap items-center justify-between mt-4 md:flex-no-wrap">
+        <div className="flex flex-wrap items-center justify-between mt-4 md:flex-nowrap">
           <p className="text-gray-700 dark:text-gray-500">Joschua Schneider</p>
           <p className="text-sm text-gray-600">
             <PageViews slug={slug} increment />

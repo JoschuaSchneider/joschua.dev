@@ -74,7 +74,7 @@ const TopTracks = () => {
       {!showAll && (
         <button
           onClick={() => setShowAll(true)}
-          className="w-full px-4 py-2 mt-6 font-bold text-center text-gray-800 bg-gray-100 rounded dark:bg-gray-900 dark:text-gray-300"
+          className="w-full px-4 py-2 mt-6 font-bold text-center text-gray-800 rounded bg-gray-50 dark:bg-gray-900 dark:text-gray-300"
         >
           Show more
         </button>

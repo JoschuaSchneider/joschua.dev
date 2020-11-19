@@ -1,8 +1,5 @@
 module.exports = {
-  dark: 'media',
-  experimental: {
-    darkModeVariant: true,
-  },
+  darkMode: 'class',
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -85,10 +82,14 @@ module.exports = {
     }),
   },
   variants: {
-    gradientColorStops: ['dark'],
-    backgroundImage: ['responsive', 'dark'],
-    opacity: ['responsive', 'disabled'],
-    scale: ['responsive', 'hover', 'group-hover'],
+    extend: {
+      textColor: ['dark'],
+      backgroundColor: ['dark'],
+      gradientColorStops: ['dark'],
+      backgroundImage: ['dark'],
+      opacity: ['group-hover'],
+      scale: ['group-hover'],
+    },
   },
   plugins: [
     require('@tailwindcss/typography')({

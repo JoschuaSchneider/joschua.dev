@@ -92,22 +92,22 @@ const Index = ({ repos }: { repos: any[] }) => (
         <Skill
           title="JavaScript"
           since={2014}
-          className="col-span-2 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200 md:col-span-3"
+          className="col-span-2 text-indigo-700 bg-indigo-50 dark:bg-indigo-900 dark:text-indigo-100 md:col-span-3"
         />
         <Skill
           title="React"
           since={2016}
-          className="col-span-1 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200"
+          className="col-span-1 text-indigo-700 bg-indigo-50 dark:bg-indigo-900 dark:text-indigo-100"
         />
         <Skill
           title="Node"
           since={2014}
-          className="col-span-1 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200"
+          className="col-span-1 text-indigo-700 bg-indigo-50 dark:bg-indigo-900 dark:text-indigo-100"
         />
         <Skill
           title="TypeScript"
           since={2019}
-          className="col-span-1 text-indigo-700 bg-indigo-100 dark:bg-indigo-900 dark:text-indigo-200"
+          className="col-span-1 text-indigo-700 bg-indigo-50 dark:bg-indigo-900 dark:text-indigo-100"
         />
       </div>
     </Container>
@@ -130,7 +130,7 @@ const Index = ({ repos }: { repos: any[] }) => (
             <p className="mb-4 text-gray-800 dark:text-gray-300">
               {repo.description}
             </p>
-            <div className="flex text-gray-700 dark:text-gray-600">
+            <div className="flex text-gray-700 dark:text-gray-400">
               <div className="mr-4 text-gray-800 dark:text-gray-500">
                 <svg
                   className="inline-flex h-4 mb-px"

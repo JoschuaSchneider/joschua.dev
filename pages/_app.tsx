@@ -15,6 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       }}
     />
     <Head>
+      <script src="/dark-mode-script.js" />
       <link
         rel="icon"
         type="image/png"
