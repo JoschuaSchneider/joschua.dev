@@ -19,7 +19,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Joschua; Full-Stack Developer from Germany",
-  description: "I'm a senior Full-Stack developer from Germany. I build modern web applications, Mobile apps and tooling. Coding has been my passion for over 15 years and my particular interest in Web Development now makes up the majority of my experience.",
+  description:
+    "I'm a senior Full-Stack developer from Germany. I build modern web applications, Mobile apps and tooling. Coding has been my passion for over 15 years and my particular interest in Web Development now makes up the majority of my experience.",
 };
 
 export default async function RootLayout({
@@ -32,18 +33,34 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="sticky top-0 z-50 py-8 mt-8 nav bg-gradient-to-b dark:from-black from-white to-transparent backdrop-blur-sm">
-          <div className="flex items-center justify-between max-w-4xl px-8 mx-auto">
+        <nav className="sticky top-0 z-50 py-8 mt-8 nav ">
+          <div className="absolute inset-0 bg-white/80 dark:bg-black/80 backdrop-blur-lg"></div>
+          <div className="flex relative items-center justify-between max-w-4xl px-8 mx-auto">
             <div className="">
-              <Link href="/" className="flex items-center justify-center w-8 h-8 font-mono text-xl text-white bg-indigo-800 rounded-sm">
+              <Link
+                href="/"
+                className="flex items-center justify-center w-8 h-8 font-mono text-xl text-white bg-indigo-800 rounded-sm"
+              >
                 js
               </Link>
             </div>
             <div className="flex text-gray-900 dark:text-gray-200">
-              <Link href="/about-me" className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-900">
+              <Link
+                href="/about-me"
+                className="px-4 py-2 rounded hover:bg-gray-100/60 dark:hover:bg-gray-900/60"
+              >
                 About Me
               </Link>
-              <Link href="/" className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-900">
+              <Link
+                href="/photography"
+                className="px-4 py-2 rounded hover:bg-gray-100/60 dark:hover:bg-gray-900/60"
+              >
+                Photography
+              </Link>
+              <Link
+                href="/"
+                className="px-4 py-2 rounded hover:bg-gray-100/60 dark:hover:bg-gray-900/60"
+              >
                 Home
               </Link>
               <DarkModeButton />
@@ -51,7 +68,7 @@ export default async function RootLayout({
           </div>
         </nav>
         <main>
-          {children}
+          <Suspense>{children}</Suspense>
         </main>
         <footer className="pt-20 mb-20">
           <Container className="">
@@ -61,10 +78,16 @@ export default async function RootLayout({
           </Container>
           <Container className="px-8 mx-auto mt-20">
             <div className="flex items-center justify-center mb-6 space-x-6 font-mono">
-              <Link href="/contact" className="text-gray-700 rounded dark:text-gray-600">
+              <Link
+                href="/contact"
+                className="text-gray-700 rounded dark:text-gray-600"
+              >
                 /contact
               </Link>
-              <Link href="/uses" className="text-gray-700 rounded dark:text-gray-600">
+              <Link
+                href="/uses"
+                className="text-gray-700 rounded dark:text-gray-600"
+              >
                 /uses
               </Link>
             </div>
@@ -125,5 +148,5 @@ export default async function RootLayout({
         </footer>
       </body>
     </html>
-  )
+  );
 }

@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: cms-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cms
+    ports:
+      - "5432:5432"
